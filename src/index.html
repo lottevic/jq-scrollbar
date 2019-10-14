@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+<head>
+  <title>jQuery Scrollbar 範例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Font Awesome v4.7.0 -->
+  <link rel="stylesheet"  href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+  <!-- jquery scrollbar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
+  <style>
+    .lotte-wrapper{
+      max-width: 600px;
+      width: 90%;
+      height: 160px;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+    }
+    .lotte-article{
+      padding: 16px 16px 0 16px;
+    }
+    .lotte-gallery{
+      width: 780px;
+      padding: 10px;
+    }
+    .lotte-gallery img{
+      margin: 10px;
+      padding: 0;
+    }
+    /*table*/
+    .main-table{
+			width: 100%;
+			margin: auto;
+			border-collapse: separate;
+			border-spacing: 0;
+			font-weight: normal;
+		}
+		.main-table th, .main-table td {
+			padding: 5px 10px;
+			/* white-space: nowrap; */
+			min-width: 120px;
+			vertical-align: top;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+		}
+		
+		.main-table tr:nth-child(odd){
+			background: #f7f7f7;
+		}
+		.main-table tr:nth-child(even){
+			background: #ededed;
+		}
+		.main-table thead tr, .main-table tfoot tr,
+		.main-table thead tr:nth-child(even), .main-table thead tr:nth-child(odd),
+		.main-table tfoot tr:nth-child(even), .main-table tfoot tr:nth-child(odd){
+			background: #cbcbcb;
+		}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h2>jQuery Scrollbar 範例</h2>
+  <!-- <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="index.html">選取單一日期</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://gromo.github.io/jquery.scrollbar/" target="_blank" style="border: none;" title="原站連結"><i class="fa fa-link"></i></a>
+    </li>
+  </ul>   -->
+</div>
+
+<div class="container " >
+  <div class="row mb-5 d-flex flex-column  align-items-center">
+    <h5>scrollbar-inner 直向</h5> 
+    <div class="lotte-wrapper scrollbar-inner">
+      <div class="lotte-article">
+        <p>
+          依金管會規定，目前直接投資大陸證券市場之有價證券以掛牌上市有價證券為限且不得超過境外基金資產淨值之20%。當該基金投資地區包含中國大陸及香港，
+          投資人須留意中國市場之特定政治、經濟與市場等投資風險。
+        </p>
+        <p>
+          基金經金管會核准或同意生效，惟不表示絕無風險。基金經理公司以往之經理績效不保證基金之最低投資收益；基金經理公司除盡善良管理人之注意義務外，
+          不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱基金公開說明書。有關基金應負擔之費用(境外基金含分銷費用)及投資風險等已揭露於基金公開說明書及投資人須知。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5 d-flex flex-column align-items-center">
+    <h5>scrollbar-inner 横向</h5>
+    <div class="lotte-wrapper scrollbar-inner">
+      <div class="lotte-gallery">
+        <img src="https://picsum.photos/id/101/100/" alt="">
+        <img src="https://picsum.photos/id/102/100/" alt="">
+        <img src="https://picsum.photos/id/103/100/" alt="">
+        <img src="https://picsum.photos/id/104/100/" alt="">
+        <img src="https://picsum.photos/id/106/100/" alt="">
+        <img src="https://picsum.photos/id/1068/100/" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5 d-flex flex-column align-items-center">
+    <h5>scrollbar-rail 樣式</h5>
+    <div class="lotte-wrapper scrollbar-rail">
+      <div class="lotte-article">
+        <p>
+          上傳之資料必須符合活動辦法，並持有中華民國國籍者，於活動期間內完成方有抽獎資格。
+        </p>
+        <p>
+          每位會員限定中獎一次，若有重複中獎，則以較高價值者為準。中獎者會由承製單位（喆喆品牌形象有限公司）於於中獎名單公布日隔日起以電話方式聯絡，未能於三個工作天內聯絡上之中獎者，將失去中獎資格，原獎項亦不予重新抽獎。中獎者保證所有填寫或提出之資料均屬實且正確，且未冒用任何第三人之資料，如有不實或不正確之情事，將被取消中獎資格。
+        </p>
+        <p>
+          上述獎品價值合計超過1,000元者，將由承製單位依照其價值及稅法規定開立扣繳憑單予得獎人，併入個人該年度綜合所得申報，故得獎者領取獎品及獎金時，應提供身分證件影本或載有「身分證號」之文件影本，並填具含戶籍地址及通訊地址等資訊之領獎明細清單，供承製單位依法開立扣繳憑單；獎金及獎品價值合計超過20,000元者，得獎人尚須先繳交獎品價值10%之機會中獎所得稅；獎品寄送範圍僅限台灣、澎湖、金門、馬祖。
+        </p>
+        <p>
+          如任何因電腦、網路、電話等技術或不可抵抗之因素，而使主辦/承製單位寄出或登錄之資料有延遲、遺失、錯誤、毀損等無法辨識之情況，參加者亦不得因此異議或求償。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5 d-flex flex-column align-items-center">
+    <h5>google chrome 樣式</h5>
+    <div class="lotte-wrapper scrollbar-chrome">
+      <div class="lotte-table">
+        <table class="main-table">
+          <thead>
+            <tr>
+              <th class="fixed-side" scope="col">監測站名稱</th>
+              <th scope="col">1.壓力</th>
+              <th scope="col">2.流量</th>
+              <th scope="col">3.水質</th>
+              <th scope="col">4.屬性4</th>
+              <th scope="col">5.屬性5</th>
+              <th scope="col">6.屬性6</th>
+              <th scope="col">7.屬性7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="fixed-side">冬山鄉德興一路46號監測站</th>
+              <td>
+                <p>水質計壓力 0.123456789kg/cm2</p>
+              </td>
+              <td>
+                <p>流量計 3,434.64 cmd</p>
+        
+              </td>
+              <td>原水濁度 0.02 NTU</td>
+              <td>清水池濁度計濁度 0.05 NTU</td>
+              <td>清水池餘氯計餘氯 0.49 PPM</td>
+              <td>原水濁度3 0.02 NTU</td>
+              <td>清水出水瞬間流量 21,405 cmd</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- jquery scrollbar -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
+  <script>
+      $( document ).ready(function() {
+          $('.scrollbar-inner').scrollbar();
+          $('.scrollbar-rail').scrollbar();
+          $('.scrollbar-chrome').scrollbar();
+      }); //document ready
+  </script>
+</body>
+</html>
