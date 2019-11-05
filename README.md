@@ -12,7 +12,7 @@
 ##  Setting up
 ```html
   <!-- css -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
   <!-- jquery  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- jquery scrollbar -->
@@ -74,5 +74,5 @@ $( document ).ready(function() {
 * js
 ```javascript
 $( document ).ready(function() {
-    $('.scrollbar-rail').scrollbar();
+    $('.scrollbar-chrome').scrollbar();
 });
